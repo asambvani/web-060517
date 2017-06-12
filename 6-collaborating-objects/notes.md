@@ -2,13 +2,20 @@
   what is each line doing?
   Why do we need to do this?
 
+  Require loads file from specific file path, if no path given, pulls from ruby gem folder.
+  Require_relative pulls from relative file name.
+
 2. What is happening in console.rb
   - what do you have access to if you run ruby console.rb
+
+  Loading environment.rb using require_relative. Reloading using 'load
 
 3. Note that we have an artist class and a song class.  Describe the relationship between artists and songs.
   artist -> songs
   artist.songs
   song.artist
+
+
 4. Build out the following
   - Artist.all
     -> should return all of the artists that have been initialized
