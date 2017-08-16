@@ -1,0 +1,33 @@
+<!-- THIS IS FROM THE LECTURE EXCERCISE -->
+<%= form_for @actor do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :home_Town %>
+  <%= f.submit "Submit actor" %>
+<%end%>
+
+<form action="/actors" method="post">
+  <label>name</label>
+  <input type="text" name="actor[name]">
+  <label>hometown</label>
+  <input type="text" name="actor[hometowns]">
+  <input type="submit">
+</form>
+
+What is the request that is made?
+
+-post to /actors
+
+Where does it go in the application?
+-to actors controller #create
+
+What controller action are we in?
+
+-ActorsController#create
+
+Write out the contents of that controller action
+
+-actor = Actor.new(params[:actor])
+
+What's the difference between redirect and render
+
+-redirect sends you to a new route wheras render actually renders the erb file you explicity state   
